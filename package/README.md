@@ -119,23 +119,6 @@ how to open it, for example by calling its existing editor integration:
 The action is hidden when no trustworthy source location is available. React
 development metadata is best effort and may be unavailable in production builds.
 
-### Fixed output detail
-
-For automation that requires consistent feedback detail, supply `outputDetail`:
-
-```tsx
-<Agentation outputDetail="forensic" onSubmit={sendFeedback} />
-```
-
-This overrides the saved user setting and disables the Output Detail control.
-It applies to structured markdown from Copy, Send, and webhooks, and determines
-React component detection detail when React Components is enabled. Metadata-only
-`copyFormat` options still produce their usual output.
-
-Changing the prop takes effect immediately. Removing it restores the user's
-setting and re-enables the control. The forced value is not saved over the user's
-preference. Omitting the prop preserves the existing behavior.
-
 ### Host modals and popovers
 
 Pass the active overlay's content element, using a callback ref so changes
